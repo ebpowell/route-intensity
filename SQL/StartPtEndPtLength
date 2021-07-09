@@ -1,0 +1,1 @@
+select st_length(st_union(zipclip.the_geom, countylines.the_geom)),st_startpoint(st_union(zipclip.the_geom, countylines.the_geom)),st_endpoint(st_union(zipclip.the_geom, countylines.the_geom)) as shape from zipclip, countylines where countylines.gid < 10;

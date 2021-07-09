@@ -1,0 +1,1 @@
+select ST_AsText(ST_StartPoint(ST_Union(zipclip.the_geom, countylines.the_geom))),ST_AsText(ST_EndPoint(ST_Union(zipclip.the_geom, countylines.the_geom))) from countylines, zipclip where countylines.gid=1;
